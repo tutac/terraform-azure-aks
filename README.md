@@ -1,6 +1,8 @@
 # terraform-iaac-august-2020
 # This module creates an aks in azure 
+
 ```
+
 module "aks" {
         source = "tutac/terraform-azure-aks"
         cluster_name = "example-aks1"
@@ -16,9 +18,11 @@ module "aks" {
         username = "centos"
         vm_size = "Standard_A2_v2"
 }
+```
 
 # This is the outputs
- ``
+
+ ```
 
 output "cluster_id" {
   value = module.aks.cluster_id
@@ -59,3 +63,4 @@ output "location" {
 output "kube_config_raw" {
   value = module.aks.kube_config_raw
 }
+```
